@@ -99,15 +99,41 @@ public class VetManagementSystem {
         System.out.println("Booking cancelled successfully.");
     }
 
-    // Method to search for staff
-    private static void searchStaff() {
-        // Implement search logic for staff
-        System.out.println("Search for staff functionality");
+  // Method to search for staff
+private static void searchStaff() {
+    System.out.print("Enter staff reference: ");
+    String staffRef = scanner.nextLine();
+
+    // Iterate over surgeries to find staff
+    for (Surgery surgery : surgeries) {
+        Staff staff = surgery.findStaff(staffRef);
+        if (staff != null) {
+            System.out.println("Staff found:");
+            System.out.println("Name: " + staff.getName());
+            System.out.println("Reference: " + staff.getRef());
+            return;
+        }
     }
 
-    // Method to search for pets
-    private static void searchPets() {
-        // Implement search logic for pets
-        System.out.println("Search for pets functionality");
-    }
+    System.out.println("Staff not found.");
 }
+
+// Method to search for pets
+private static void searchPets() {
+    System.out.print("Enter pet reference: ");
+    String petRef = scanner.nextLine();
+
+    // Iterate over surgeries to find pets
+    for (Surgery surgery : surgeries) {
+        Pet pet = surgery.findPet(petRef);
+        if (pet != null) {
+            System.out.println("Pet found:");
+            System.out.println("Name: " + pet.getName());
+            System.out.println("Reference: " + pet.getRef());
+            return;
+        }
+    }
+
+    System.out.println("Pet not found.");
+}
+
