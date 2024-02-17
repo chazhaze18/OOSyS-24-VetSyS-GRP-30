@@ -20,7 +20,7 @@ public class Surgery {
         petList = new ArrayList<>();
         bookingList = new ArrayList<>();
     }
-    
+
     // Getter for name
     public String getName() {
         return name;
