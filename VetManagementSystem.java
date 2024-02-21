@@ -106,7 +106,7 @@ private static void searchStaff() {
 
     // Iterate over surgeries to find staff
     for (Surgery surgery : surgeries) {
-        Staff staff = surgery.findStaff(staffRef);
+        Staff staff = surgery.searchStaff(staffRef);
         if (staff != null) {
             System.out.println("Staff found:");
             System.out.println("Name: " + staff.getName());
@@ -125,7 +125,7 @@ private static void searchPets() {
 
     // Iterate over surgeries to find pets
     for (Surgery surgery : surgeries) {
-        Pet pet = surgery.findPet(petRef);
+        Pet pet = surgery.searchPet(petRef);
         if (pet != null) {
             System.out.println("Pet found:");
             System.out.println("Name: " + pet.getName());
@@ -135,5 +135,6 @@ private static void searchPets() {
     }
 
     System.out.println("Pet not found.");
+}
 }
 
