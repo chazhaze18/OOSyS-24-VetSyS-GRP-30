@@ -20,10 +20,6 @@ public abstract class Staff {
         return name;
     }
 
-    public String getName() {
-        return name;
-    }
-
     // Abstract methods
     abstract void addBooking(Booking booking);
     abstract void removeBooking(Booking booking);
