@@ -22,6 +22,10 @@ public abstract class Pet {
         return ref;
     }
 
+    public String getName() {
+        return name;
+    }
+
     // Abstract methods
     abstract void addBooking(Booking booking);
     abstract void removeBooking(Booking booking);
